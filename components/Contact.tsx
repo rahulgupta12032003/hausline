@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-export default function Contact() {
+export default function Contact({ theme }: { theme: string }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -74,6 +74,8 @@ export default function Contact() {
     }
   };
 
+  console.log({ theme });
+
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     if (name === "message" && value.length > 500) return;
@@ -116,14 +118,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
-                    Visit Our Studio
+                    Visit Our Company
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    123 Design Avenue
+                    205, UK-1, Ecotech-III
                     <br />
-                    Creative District, NY 10001
+                    Greater Noida, 201306
                     <br />
-                    United States
+                    Uttar Pradesh, India
                   </p>
                 </div>
               </div>
@@ -137,11 +139,10 @@ export default function Contact() {
                     Call Us
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    +1 (555) 123-4567
-                    <br />
-                    Mon - Fri: 9:00 AM - 6:00 PM
-                    <br />
-                    Sat: 10:00 AM - 4:00 PM
+                    +91 9811921686 (Abdul Jabbar)
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    +91 8512864086 (Mohd. Sadiq)
                   </p>
                 </div>
               </div>
@@ -155,11 +156,7 @@ export default function Contact() {
                     Email Us
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    hello@hauslineinterior.com
-                    <br />
-                    projects@hauslineinterior.com
-                    <br />
-                    careers@hauslineinterior.com
+                    hauslineinterior@gmail.com
                   </p>
                 </div>
               </div>
@@ -171,7 +168,7 @@ export default function Contact() {
               </h3>
               <div className="w-full h-64 bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968459391!3d40.74844097932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1647834789012!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.763527035756!2d77.45325177495357!3d28.546826687968558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce940ac69c761%3A0x6fbee4bbaad25732!2sHausline%20interior!5e0!3m2!1sen!2sin!4v1753723671520!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
