@@ -85,7 +85,7 @@ export default function Contact({ theme }: { theme: string }) {
   return (
     <section
       id="contact"
-      className="py-24 bg-white dark:bg-gray-900 transition-colors duration-500"
+      className="py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-500"
     >
       <div className="container mx-auto px-6">
         <div
@@ -191,7 +191,7 @@ export default function Contact({ theme }: { theme: string }) {
             <form
               id="hausline-contact"
               onSubmit={handleSubmit}
-              className="space-y-6 bg-gray-50 dark:bg-gray-800 p-8 rounded-lg"
+              className="space-y-6 bg-white dark:bg-gray-800 p-8 rounded-lg"
             >
               <div className="grid md:grid-cols-2 gap-6">
                 <div>

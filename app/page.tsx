@@ -9,6 +9,7 @@ import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import BackgroundAnimation from "../components/BackgroundAnimation";
+import TrustedPartners from "@/components/TrustedPartner";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
@@ -47,6 +48,7 @@ export default function Home() {
         <About />
         <Services />
         <Portfolio />
+        <TrustedPartners />
         <Contact theme={theme} />
       </main>
       <Footer />
