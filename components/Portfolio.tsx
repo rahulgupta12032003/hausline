@@ -118,7 +118,7 @@ export default function Portfolio() {
               Portfolio
             </span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Explore our diverse collection of completed projects showcasing our
             expertise across various design styles and spaces.
           </p>
@@ -172,7 +172,7 @@ export default function Portfolio() {
                 <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm md:text-md">
                   {project.description}
                 </p>
                 <div className="flex items-center justify-between">

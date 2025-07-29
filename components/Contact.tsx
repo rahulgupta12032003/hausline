@@ -97,7 +97,7 @@ export default function Contact({ theme }: { theme: string }) {
             Get In{" "}
             <span className="text-amber-600 dark:text-amber-400">Touch</span>
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Ready to transform your space? Let's discuss your project and bring
             your vision to life.
           </p>

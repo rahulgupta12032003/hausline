@@ -14,7 +14,7 @@ export default function Footer() {
             >
               Hausline Interior
             </Link>
-            <p className="text-gray-300 mb-6 leading-relaxed">
+            <p className="text-gray-300 mb-6 leading-relaxed text-xs md:text-md">
               Transform your space into something extraordinary with our
               award-winning interior design services. We create beautiful,
               functional environments that reflect your unique style and enhance
@@ -55,7 +55,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#home"
-                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
                 >
                   Home
                 </a>
@@ -63,7 +63,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
                 >
                   About Us
                 </a>
@@ -71,7 +71,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#services"
-                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
                 >
                   Services
                 </a>
@@ -79,7 +79,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#portfolio"
-                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
                 >
                   Portfolio
                 </a>
@@ -87,7 +87,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300"
+                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
                 >
                   Contact
                 </a>
@@ -101,23 +101,31 @@ export default function Footer() {
               <div className="flex items-start space-x-3">
                 <i className="ri-map-pin-line text-amber-400 mt-1"></i>
                 <div>
-                  <p className="text-gray-300">205, UK-1, Ecotech-III</p>
-                  <p className="text-gray-300">
+                  <p className="text-gray-300 text-xs md:text-md">
+                    205, UK-1, Ecotech-III
+                  </p>
+                  <p className="text-gray-300 text-xs md:text-md">
                     Greater Noida, 201306, Uttar Pradesh, India
                   </p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <i className="ri-phone-line text-amber-400"></i>
-                <p className="text-gray-300">+91 9811921686 (Abdul Jabbar)</p>
+                <p className="text-gray-300 text-xs md:text-md">
+                  +91 9811921686 (Abdul Jabbar)
+                </p>
               </div>
               <div className="flex items-center space-x-3">
                 <i className="ri-phone-line text-amber-400"></i>
-                <p className="text-gray-300">+91 8512864086 (Mohd. Sadiq)</p>
+                <p className="text-gray-300 text-xs md:text-md">
+                  +91 8512864086 (Mohd. Sadiq)
+                </p>
               </div>
               <div className="flex items-center space-x-3">
                 <i className="ri-mail-line text-amber-400"></i>
-                <p className="text-gray-300">hauslineinterior@gmail.com</p>
+                <p className="text-gray-300 text-xs md:text-md">
+                  hauslineinterior@gmail.com
+                </p>
               </div>
             </div>
           </div>
