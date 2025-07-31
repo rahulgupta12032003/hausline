@@ -45,7 +45,7 @@ export default function Services() {
         "Professional workspace design that enhances productivity and brand identity while creating inspiring environments.",
       icon: "ri-building-line",
       image:
-        "https://readdy.ai/api/search-image?query=modern%20commercial%20office%20interior%20design%2C%20contemporary%20workspace%20with%20stylish%20furniture%2C%20professional%20lighting%2C%20brand%20identity%20elements%2C%20productive%20environment&width=600&height=400&seq=service2&orientation=landscape",
+        "https://readdy.ai/api/search-image?query=luxury%20residential%20interior%20design%2C%20modern%20living%20room%20with%20custom%20furniture%2C%20elegant%20lighting%20fixtures%2C%20premium%20materials%2C%20contemporary%20decor%2C%20sophisticated%20color%20scheme&width=600&height=400&seq=service1&orientation=landscape",
       features: [
         "Brand Integration",
         "Workflow Optimization",
@@ -59,7 +59,7 @@ export default function Services() {
         "Transform existing spaces into modern, functional environments with our comprehensive renovation services.",
       icon: "ri-hammer-line",
       image:
-        "https://readdy.ai/api/search-image?query=home%20renovation%20and%20remodeling%20project%2C%20before%20and%20after%20transformation%2C%20modern%20kitchen%20design%2C%20updated%20fixtures%2C%20improved%20layout%2C%20contemporary%20finishes&width=600&height=400&seq=service3&orientation=landscape",
+        "https://readdy.ai/api/search-image?query=luxury%20residential%20interior%20design%2C%20modern%20living%20room%20with%20custom%20furniture%2C%20elegant%20lighting%20fixtures%2C%20premium%20materials%2C%20contemporary%20decor%2C%20sophisticated%20color%20scheme&width=600&height=400&seq=service1&orientation=landscape",
       features: [
         "Structural Changes",
         "Modern Updates",
@@ -73,7 +73,7 @@ export default function Services() {
         "Create memorable experiences through exceptional hospitality design that combines comfort with sophistication.",
       icon: "ri-hotel-line",
       image:
-        "https://readdy.ai/api/search-image?query=luxury%20hotel%20interior%20design%2C%20elegant%20hospitality%20space%2C%20sophisticated%20lobby%20area%2C%20premium%20materials%2C%20comfortable%20seating%2C%20ambient%20lighting%2C%20welcoming%20atmosphere&width=600&height=400&seq=service4&orientation=landscape",
+        "https://readdy.ai/api/search-image?query=luxury%20residential%20interior%20design%2C%20modern%20living%20room%20with%20custom%20furniture%2C%20elegant%20lighting%20fixtures%2C%20premium%20materials%2C%20contemporary%20decor%2C%20sophisticated%20color%20scheme&width=600&height=400&seq=service1&orientation=landscape",
       features: [
         "Guest Experience Design",
         "Branding Integration",

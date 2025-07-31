@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface HeaderProps {
   theme: string;
@@ -49,15 +50,23 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
           : "bg-transparent"
       }`}
     >
-      <nav className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+      <nav className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 py-1.5 sm:py-2">
         <div className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-xl sm:text-2xl font-bold font-pacifico text-amber-600 dark:text-amber-400"
-          >
-            Hausline Interior
-          </Link>
-
+          <div>
+            <Image
+              src="/logo.png"
+              height={20}
+              width={150}
+              alt="Hausline Interior"
+              className="h-[25px]"
+            />
+            <Link
+              href="/"
+              className="text-xl sm:text-2xl font-bold font-pacifico text-amber-600 dark:text-amber-400"
+            >
+              Hausline Interior
+            </Link>
+          </div>
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
