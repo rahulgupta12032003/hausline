@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="bg-[#0e0e0e] text-white py-16">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="text-3xl font-bold font-pacifico text-amber-400 mb-6 block"
+              className="text-3xl font-medium font-pacifico text-white mb-6 block"
             >
               Hausline Interior
             </Link>
@@ -23,83 +23,47 @@ export default function Footer() {
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors duration-300"
+                className="w-10 h-10 bg-goldish-500 rounded-full flex items-center justify-center hover:bg-goldish-600 transition-colors duration-300"
               >
                 <i className="ri-facebook-fill text-white"></i>
               </a>
               <a
                 href="https://www.instagram.com/hausline_interior_?igsh=MWpzcXM5MWFweThrYQ=="
                 target="_blank"
-                className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors duration-300"
+                className="w-10 h-10 bg-goldish-500 rounded-full flex items-center justify-center hover:bg-goldish-600 transition-colors duration-300"
               >
                 <i className="ri-instagram-line text-white"></i>
               </a>
-              {/* <a
-                href="#"
-                className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors duration-300"
-              >
-                <i className="ri-twitter-x-line text-white"></i>
-              </a> */}
-              {/* <a
-                href="#"
-                className="w-10 h-10 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors duration-300"
-              >
-                <i className="ri-linkedin-fill text-white"></i>
-              </a> */}
             </div>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-xl font-semibold mb-6 text-gray-500">
+              Quick Links
+            </h3>
             <ul className="space-y-3">
-              <li>
-                <a
-                  href="#home"
-                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#about"
-                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
-                >
-                  Services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#portfolio"
-                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
-                >
-                  Portfolio
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className="text-gray-300 text-xs md:text-md hover:text-amber-400 transition-colors duration-300"
-                >
-                  Contact
-                </a>
-              </li>
+              {["Home", "About Us", "Services", "Portfolio", "Contact"].map(
+                (item, index) => (
+                  <li key={index}>
+                    <a
+                      href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
+                      className="text-gray-300 text-xs md:text-md hover:text-goldish-400 transition-colors duration-300"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold mb-6">Contact Info</h3>
+            <h3 className="text-xl font-semibold mb-6 text-gray-500">
+              Contact Info
+            </h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
-                <i className="ri-map-pin-line text-amber-400 mt-1"></i>
+                <i className="ri-map-pin-line text-goldish-500 mt-1"></i>
                 <div>
                   <p className="text-gray-300 text-xs md:text-md">
                     205, UK-1, Ecotech-III
@@ -110,19 +74,19 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <i className="ri-phone-line text-amber-400"></i>
+                <i className="ri-phone-line text-goldish-500"></i>
                 <p className="text-gray-300 text-xs md:text-md">
                   +91 9811921686 (Abdul Jabbar)
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <i className="ri-phone-line text-amber-400"></i>
+                <i className="ri-phone-line text-goldish-500"></i>
                 <p className="text-gray-300 text-xs md:text-md">
                   +91 8512864086 (Mohd. Sadiq)
                 </p>
               </div>
               <div className="flex items-center space-x-3">
-                <i className="ri-mail-line text-amber-400"></i>
+                <i className="ri-mail-line text-goldish-500"></i>
                 <p className="text-gray-300 text-xs md:text-md">
                   hauslineinterior@gmail.com
                 </p>
@@ -132,13 +96,19 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-          <p className="text-gray-400">
+          <p className="text-gray-400 text-xs md:text-sm">
             © 2024 Hausline Interior. All rights reserved. |
-            <a href="#" className="text-amber-400 hover:text-amber-300 ml-1">
+            <a
+              href="#"
+              className="text-goldish-500 hover:text-goldish-400 ml-1"
+            >
               Privacy Policy
             </a>{" "}
             |
-            <a href="#" className="text-amber-400 hover:text-amber-300 ml-1">
+            <a
+              href="#"
+              className="text-goldish-500 hover:text-goldish-400 ml-1"
+            >
               Terms of Service
             </a>
           </p>

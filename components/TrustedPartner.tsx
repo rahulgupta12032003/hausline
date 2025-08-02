@@ -1,10 +1,14 @@
 "use client";
 
+import { partners } from "@/constants/data";
 import { useEffect, useRef, useState } from "react";
+import { motion, useAnimation } from "framer-motion";
 
 export default function TrustedPartners() {
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
+  const marqueeRef = useRef<HTMLDivElement>(null);
+  const controls = useAnimation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,16 +27,28 @@ export default function TrustedPartners() {
     return () => observer.disconnect();
   }, []);
 
-  const partners = [
-    { name: "Century", logo: "/century.png" },
-    // { name: "Greenlam", logo: "/greenlam.png" },
-    { name: "Hettich", logo: "/hettich.png" },
-    { name: "Actiontesa", logo: "/actiontesa.png" },
-    { name: "Bosch", logo: "/Bosch.png" },
-    { name: "Hafele", logo: "/hafele.png" },
-    { name: "Merino", logo: "/merino.png" },
-    { name: "Jaquar", logo: "/jaquar.png" },
-  ];
+  // Start the infinite scroll animation
+  useEffect(() => {
+    const animate = async () => {
+      const container = marqueeRef.current;
+      if (!container) return;
+
+      const scrollWidth = container.scrollWidth / 2;
+      while (true) {
+        await controls.start({
+          x: -scrollWidth,
+          transition: {
+            duration: 20,
+            ease: "linear",
+          },
+        });
+
+        controls.set({ x: 0 });
+      }
+    };
+
+    animate();
+  }, [controls]);
 
   return (
     <section
@@ -48,7 +64,9 @@ export default function TrustedPartners() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
             Trusted{" "}
-            <span className="text-amber-600 dark:text-amber-400">Partners</span>
+            <span className="text-goldish-600 dark:text-goldish-400">
+              Partners
+            </span>
           </h2>
           <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mt-4">
             We proudly collaborate with industry-leading partners who share our
@@ -57,7 +75,11 @@ export default function TrustedPartners() {
         </div>
 
         <div className="relative w-full overflow-hidden">
-          <div className="flex animate-marquee space-x-12">
+          <motion.div
+            ref={marqueeRef}
+            className="flex space-x-12"
+            animate={controls}
+          >
             {[...partners, ...partners].map((partner, index) => (
               <div
                 key={index}
@@ -66,30 +88,13 @@ export default function TrustedPartners() {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-[40] w-[130] object-contain"
+                  className="h-40 w-[130px] object-contain"
                 />
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-
-        .animate-marquee {
-          display: flex;
-          width: fit-content;
-          animation: marquee 25s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }

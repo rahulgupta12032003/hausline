@@ -114,7 +114,7 @@ export default function Portfolio() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
             Our{" "}
-            <span className="text-amber-600 dark:text-amber-400">
+            <span className="text-goldish-600 dark:text-goldish-400">
               Portfolio
             </span>
           </h2>
@@ -131,7 +131,7 @@ export default function Portfolio() {
               onClick={() => setSelectedCategory(category.id)}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 whitespace-nowrap ${
                 selectedCategory === category.id
-                  ? "bg-amber-600 text-white shadow-lg"
+                  ? "bg-goldish-600 text-white shadow-lg"
                   : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-600"
               }`}
             >
@@ -176,13 +176,13 @@ export default function Portfolio() {
                   {project.description}
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-amber-600 dark:text-amber-400 font-medium">
+                  <span className="text-sm text-goldish-600 dark:text-goldish-400 font-medium">
                     {
                       categories.find((cat) => cat.id === project.category)
                         ?.name
                     }
                   </span>
-                  <i className="ri-arrow-right-line text-gray-400 group-hover:text-amber-600 transition-colors duration-300"></i>
+                  <i className="ri-arrow-right-line text-gray-400 group-hover:text-goldish-600 transition-colors duration-300"></i>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@ export default function Portfolio() {
                 {selectedProject.description}
               </p>
               <div className="flex items-center space-x-4 mb-6">
-                <span className="bg-amber-100 dark:bg-amber-900 text-amber-800 dark:text-amber-200 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-goldish-100 dark:bg-goldish-900 text-goldish-800 dark:text-goldish-200 px-3 py-1 rounded-full text-sm font-medium">
                   {
                     categories.find(
                       (cat) => cat.id === selectedProject.category
@@ -227,7 +227,7 @@ export default function Portfolio() {
               </div>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap"
+                className="bg-goldish-600 hover:bg-goldish-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 whitespace-nowrap"
               >
                 Close Gallery
               </button>

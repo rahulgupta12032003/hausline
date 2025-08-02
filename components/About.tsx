@@ -71,7 +71,7 @@ export default function About() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Creating Dreams Into
-              <span className="text-amber-600 dark:text-amber-400 block">
+              <span className="text-goldish-600 dark:text-goldish-400 block">
                 Reality
               </span>
             </h2>
@@ -90,7 +90,7 @@ export default function About() {
             </p>
 
             <div className="flex items-center space-x-4 mb-8">
-              <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
                 <i className="ri-award-line text-white text-xl"></i>
               </div>
               <div>
@@ -104,7 +104,7 @@ export default function About() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-amber-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
                 <i className="ri-leaf-line text-white text-xl"></i>
               </div>
               <div>
@@ -133,7 +133,7 @@ export default function About() {
               />
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-amber-600 dark:text-amber-400">
+                  <div className="text-3xl font-bold text-goldish-600 dark:text-goldish-400">
                     15+
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">
@@ -173,9 +173,9 @@ export default function About() {
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="w-16 h-16 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-goldish-100 dark:bg-goldish-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i
-                  className={`${item.icon} text-2xl text-amber-600 dark:text-amber-400`}
+                  className={`${item.icon} text-2xl text-goldish-600 dark:text-goldish-400`}
                 ></i>
               </div>
               <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">

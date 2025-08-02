@@ -8,7 +8,7 @@ import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
-import BackgroundAnimation from "../components/BackgroundAnimation";
+// import BackgroundAnimation from "../components/BackgroundAnimation";
 import TrustedPartners from "@/components/TrustedPartner";
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-all duration-500">
-      <BackgroundAnimation />
+      {/* <BackgroundAnimation /> */}
       <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="relative z-10">
         <Hero />

@@ -95,7 +95,7 @@ export default function Contact({ theme }: { theme: string }) {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
             Get In{" "}
-            <span className="text-amber-600 dark:text-amber-400">Touch</span>
+            <span className="text-goldish-600 dark:text-goldish-400">Touch</span>
           </h2>
           <p className="text-sm md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Ready to transform your space? Let's discuss your project and bring
@@ -113,8 +113,8 @@ export default function Contact({ theme }: { theme: string }) {
           >
             <div className="space-y-8">
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center">
-                  <i className="ri-map-pin-line text-amber-600 dark:text-amber-400 text-xl"></i>
+                <div className="w-12 h-12 bg-goldish-100 dark:bg-goldish-900 rounded-full flex items-center justify-center">
+                  <i className="ri-map-pin-line text-goldish-600 dark:text-goldish-400 text-xl"></i>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
@@ -131,8 +131,8 @@ export default function Contact({ theme }: { theme: string }) {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center">
-                  <i className="ri-phone-line text-amber-600 dark:text-amber-400 text-xl"></i>
+                <div className="w-12 h-12 bg-goldish-100 dark:bg-goldish-900 rounded-full flex items-center justify-center">
+                  <i className="ri-phone-line text-goldish-600 dark:text-goldish-400 text-xl"></i>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
@@ -148,8 +148,8 @@ export default function Contact({ theme }: { theme: string }) {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center">
-                  <i className="ri-mail-line text-amber-600 dark:text-amber-400 text-xl"></i>
+                <div className="w-12 h-12 bg-goldish-100 dark:bg-goldish-900 rounded-full flex items-center justify-center">
+                  <i className="ri-mail-line text-goldish-600 dark:text-goldish-400 text-xl"></i>
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
@@ -208,7 +208,7 @@ export default function Contact({ theme }: { theme: string }) {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-goldish-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -226,7 +226,7 @@ export default function Contact({ theme }: { theme: string }) {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-goldish-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -246,7 +246,7 @@ export default function Contact({ theme }: { theme: string }) {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-goldish-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm"
                     placeholder="Enter your phone number"
                   />
                 </div>
@@ -263,7 +263,7 @@ export default function Contact({ theme }: { theme: string }) {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm appearance-none pr-8"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-goldish-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm appearance-none pr-8"
                     >
                       <option value="">Select a service</option>
                       <option value="residential">Residential Design</option>
@@ -292,7 +292,7 @@ export default function Contact({ theme }: { theme: string }) {
                     name="budget"
                     value={formData.budget}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm appearance-none pr-8"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-goldish-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm appearance-none pr-8"
                   >
                     <option value="">Select budget range</option>
                     <option value="under-25k">Under $25,000</option>
@@ -320,7 +320,7 @@ export default function Contact({ theme }: { theme: string }) {
                   required
                   rows={4}
                   maxLength={500}
-                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-goldish-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white text-sm resize-none"
                   placeholder="Tell us about your project, timeline, and any specific requirements..."
                 />
                 <p className="text-sm text-gray-500 mt-1">
@@ -331,7 +331,7 @@ export default function Contact({ theme }: { theme: string }) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:scale-100 whitespace-nowrap"
+                className="w-full bg-goldish-600 hover:bg-goldish-700 disabled:bg-gray-400 text-white py-4 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 disabled:scale-100 whitespace-nowrap"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>

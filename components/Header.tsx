@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 interface HeaderProps {
   theme: string;
@@ -53,16 +52,13 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
       <nav className="w-full max-w-screen-xl mx-auto px-4 sm:px-6 py-1.5 sm:py-2">
         <div className="flex items-center justify-between">
           <div>
-            <Image
-              src="/logo.png"
-              height={20}
-              width={150}
-              alt="Hausline Interior"
-              className="h-[25px]"
-            />
             <Link
               href="/"
-              className="text-xl sm:text-2xl font-bold font-pacifico text-amber-600 dark:text-amber-400"
+              className={`text-xl sm:text-2xl font-medium font-pacifico text-goldish-600 dark:text-goldish-400 font-gothic ${
+                isScrolled
+                  ? "text-goldish-500 dark:text-white"
+                  : "text-white dark:text-white"
+              }`}
             >
               Hausline Interior
             </Link>
@@ -72,7 +68,9 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300 font-medium cursor-pointer"
+                className={`uppercase font-gothic ${
+                  isScrolled ? "text-black dark:text-gray-300" : "text-white"
+                } hover:text-goldish-600 text-xs dark:hover:text-goldish-400 transition-colors duration-300 font-light cursor-pointer`}
               >
                 {item.name}
               </button>
@@ -82,12 +80,12 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
           <div className="flex items-center space-x-2 sm:space-x-4">
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-amber-100 dark:hover:bg-amber-900 transition-all duration-300 group w-10 h-10 flex items-center justify-center"
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-goldish-100 dark:hover:bg-goldish-900 transition-all duration-300 group w-10 h-10 flex items-center justify-center"
             >
               <i
                 className={`ri-${
                   theme === "light" ? "sun" : "moon"
-                }-line text-lg sm:text-xl text-gray-700 dark:text-gray-300 group-hover:text-amber-600 group-hover:rotate-180 transition-all duration-500`}
+                }-line text-lg sm:text-xl text-gray-700 dark:text-gray-300 group-hover:text-goldish-600 group-hover:rotate-180 transition-all duration-500`}
               ></i>
             </button>
 
@@ -110,7 +108,7 @@ export default function Header({ theme, toggleTheme }: HeaderProps) {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-3 text-gray-700 dark:text-gray-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors duration-300 font-medium"
+                className="block w-full text-left py-3 text-gray-700 dark:text-gray-300 hover:text-goldish-600 dark:hover:text-goldish-400 transition-colors duration-300 font-medium"
               >
                 {item.name}
               </button>

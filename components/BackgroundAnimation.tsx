@@ -29,7 +29,7 @@ export default function BackgroundAnimation() {
       {particles.map((particle: any) => (
         <div
           key={particle.id}
-          className="absolute rounded-full bg-amber-400/20 dark:bg-amber-400/10 animate-float"
+          className="absolute rounded-full bg-goldish-400/20 dark:bg-goldish-400/10 animate-float"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
@@ -42,7 +42,7 @@ export default function BackgroundAnimation() {
         />
       ))}
 
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 via-transparent to-amber-100/20 dark:from-amber-900/10 dark:via-transparent dark:to-amber-800/5" />
+      <div className="absolute inset-0 bg-gradient-to-br from-goldish-50/30 via-transparent to-goldish-100/20 dark:from-goldish-900/10 dark:via-transparent dark:to-goldish-800/5" />
     </div>
   );
 }
