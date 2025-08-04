@@ -1,37 +1,22 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 export default function About() {
-  const [isVisible, setIsVisible] = useState(false);
+  const countersRef = useRef(null);
+  const isCountersInView = useInView(countersRef, { once: true });
+
   const [counters, setCounters] = useState({
     projects: 0,
     clients: 0,
     years: 0,
     awards: 0,
   });
-  const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (isVisible) {
-      const targets = { projects: 600, clients: 250, years: 15, awards: 12 };
+    if (isCountersInView) {
+      const targets = { projects: 1300, clients: 900, years: 18, awards: 12 };
       const duration = 2000;
       const steps = 50;
       const stepTime = duration / steps;
@@ -40,12 +25,14 @@ export default function About() {
         const target = targets[key as keyof typeof targets];
         const increment = target / steps;
         let current = 0;
+
         const timer = setInterval(() => {
           current += increment;
           if (current >= target) {
             current = target;
             clearInterval(timer);
           }
+
           setCounters((prev) => ({
             ...prev,
             [key]: Math.floor(current),
@@ -53,7 +40,22 @@ export default function About() {
         }, stepTime);
       });
     }
-  }, [isVisible]);
+  }, [isCountersInView]);
+
+  const fadeInLeft = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeInRight = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
+  };
+
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  };
 
   return (
     <section
@@ -62,12 +64,13 @@ export default function About() {
     >
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div
-            className={`transform transition-all duration-1000 ${
-              isVisible
-                ? "translate-x-0 opacity-100"
-                : "-translate-x-20 opacity-0"
-            }`}
+          {/* Left Content */}
+          <motion.div
+            variants={fadeInLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Creating Dreams Into
@@ -83,7 +86,7 @@ export default function About() {
               are.
             </p>
             <p className="text-sm md:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              With over 15 years of experience in luxury interior design, we've
+              With over 18 years of experience in luxury interior design, we've
               helped hundreds of clients create their perfect spaces. From
               contemporary minimalism to timeless elegance, we craft
               environments that inspire and delight.
@@ -116,14 +119,15 @@ export default function About() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div
-            className={`transform transition-all duration-1000 delay-300 ${
-              isVisible
-                ? "translate-x-0 opacity-100"
-                : "translate-x-20 opacity-0"
-            }`}
+          {/* Right Image */}
+          <motion.div
+            variants={fadeInRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1, delay: 0.3 }}
           >
             <div className="relative">
               <img
@@ -134,7 +138,7 @@ export default function About() {
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-goldish-600 dark:text-goldish-400">
-                    15+
+                    18+
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">
                     Years Experience
@@ -142,10 +146,11 @@ export default function About() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div ref={sectionRef} className="grid md:grid-cols-4 gap-8 mt-20">
+        {/* Counters Section */}
+        <div ref={countersRef} className="grid md:grid-cols-4 gap-8 mt-20">
           {[
             {
               key: "projects",
@@ -164,14 +169,14 @@ export default function About() {
             },
             { key: "awards", label: "Awards Won", icon: "ri-trophy-line" },
           ].map((item, index) => (
-            <div
+            <motion.div
               key={item.key}
-              className={`text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg transform transition-all duration-1000 hover:scale-105 ${
-                isVisible
-                  ? "translate-y-0 opacity-100"
-                  : "translate-y-10 opacity-0"
-              }`}
-              style={{ transitionDelay: `${index * 100}ms` }}
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:scale-105 transform transition-transform"
             >
               <div className="w-16 h-16 bg-goldish-100 dark:bg-goldish-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <i
@@ -184,7 +189,7 @@ export default function About() {
               <div className="text-gray-600 dark:text-gray-300">
                 {item.label}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

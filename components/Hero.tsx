@@ -52,24 +52,24 @@ export default function Hero() {
       before:bg-black/40
       w-[60vw] h-[300px] sm:h-[350px] rounded-full flex flex-col justify-center items-center"
               >
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-playfair mb-4 leading-tight tracking-[4px]">
+                <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl font-playfair mb-2 md:mb-4 leading-tight tracking-[4px] whitespace-nowrap">
                   {slide.title}
                   <br />
                 </h1>
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-playfair mb-4 leading-tight tracking-[4px]">
+                <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-6xl font-playfair mb-3 md:mb-4 leading-tight tracking-[4px] whitespace-nowrap">
                   {slide.subtitle}
                 </h1>
 
                 <div className="mt-[20px] flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                   <button
                     onClick={scrollToPortfolio}
-                    className="bg-goldish-500 hover:bg-goldish-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap w-full sm:w-auto cursor-pointer uppercase font-pacifico font-light"
+                    className="bg-goldish-500 hover:bg-goldish-600 text-[12px] sm:text-sm text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap w-full sm:w-auto cursor-pointer uppercase font-pacifico font-light"
                   >
                     View Our Work
                   </button>
                   <button
                     onClick={scrollToContact}
-                    className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap w-full sm:w-auto cursor-pointer uppercase font-pacifico"
+                    className="border-2 border-white text-white text-[12px] sm:text-sm hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 whitespace-nowrap w-full sm:w-auto cursor-pointer uppercase font-pacifico"
                   >
                     Get Consultation
                   </button>
