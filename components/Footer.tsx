@@ -34,6 +34,13 @@ export default function Footer() {
               >
                 <i className="ri-instagram-line text-white"></i>
               </a>
+              <a
+                href="https://wa.me/918512864086?text=Hi%2C%20I%20would%20like%20to%20know%20more%20about%20your%20interior%20works."
+                target="_blank"
+                className="w-10 h-10 bg-goldish-500 rounded-full flex items-center justify-center hover:bg-goldish-600 transition-colors duration-300"
+              >
+                <i className="ri-whatsapp-line text-white"></i>
+              </a>
             </div>
           </div>
 

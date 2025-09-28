@@ -9,14 +9,19 @@ export default function About() {
 
   const [counters, setCounters] = useState({
     projects: 0,
-    clients: 0,
+    cities_served: 0,
     years: 0,
-    awards: 0,
+    quality_checks: 0,
   });
 
   useEffect(() => {
     if (isCountersInView) {
-      const targets = { projects: 1300, clients: 900, years: 18, awards: 12 };
+      const targets = {
+        projects: 1650,
+        cities_served: 35,
+        years: 18,
+        quality_checks: 95,
+      };
       const duration = 2000;
       const steps = 50;
       const stepTime = duration / steps;
@@ -94,14 +99,42 @@ export default function About() {
 
             <div className="flex items-center space-x-4 mb-8">
               <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
-                <i className="ri-award-line text-white text-xl"></i>
+                <i className="ri-pencil-ruler-line text-white text-xl"></i>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">
-                  Award-Winning Design
+                  Customized Designs
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Recognized excellence in interior design
+                  Tailor-made interiors crafted for your lifestyle
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
+                <i className="ri-scissors-line text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">
+                  Precision Craftsmanship
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  High-quality finishes with attention to detail
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-4 mb-8">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
+                <i className="ri-tools-line text-white text-xl"></i>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">
+                  Professional Installation
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Delivered & installed by skilled experts
                 </p>
               </div>
             </div>
@@ -112,10 +145,10 @@ export default function About() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 dark:text-white">
-                  Sustainable Approach
+                  Sustainable Materials
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Eco-friendly materials and practices
+                  Eco-friendly solutions for a healthier home
                 </p>
               </div>
             </div>
@@ -158,8 +191,13 @@ export default function About() {
               icon: "ri-home-4-line",
             },
             {
-              key: "clients",
-              label: "Happy Clients",
+              key: "quality_checks",
+              label: "Quality Checks",
+              icon: "ri-trophy-line",
+            },
+            {
+              key: "cities_served",
+              label: "Cities Served",
               icon: "ri-user-smile-line",
             },
             {
@@ -167,7 +205,6 @@ export default function About() {
               label: "Years Experience",
               icon: "ri-calendar-line",
             },
-            { key: "awards", label: "Awards Won", icon: "ri-trophy-line" },
           ].map((item, index) => (
             <motion.div
               key={item.key}

@@ -34,7 +34,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-500"
+      className="py-24 bg-white dark:bg-gray-900 transition-colors duration-500"
     >
       <div className="container mx-auto px-6">
         <div

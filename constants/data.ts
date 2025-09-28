@@ -69,6 +69,16 @@ const partners = [
     { name: "Jaquar", logo: "/jaquar.png" },
 ];
 
+const clients = [
+    { name: "Century", logo: "/clients/bawana.png" },
+    { name: "Hettich", logo: "/clients/one.png" },
+    { name: "Actiontesa", logo: "/clients/strategic.png" },
+    { name: "Bosch", logo: "/clients/sun_twilight.png" },
+    { name: "Hafele", logo: "/clients/town.png" },
+    { name: "Merino", logo: "/clients/vishal.png" },
+];
+
+
 // home slides 
 const slides = [
     {
@@ -94,6 +104,7 @@ const slides = [
 const categories = [
     { id: "all", name: "All Projects" },
     { id: "residential", name: "Residential" },
+    { id: "kitchens", name: "Modular Kitchens" },
     { id: "commercial", name: "Commercial" },
     { id: "hospitality", name: "Hospitality" },
     { id: "renovation", name: "Renovation" },
@@ -160,6 +171,66 @@ const projects = [
             "https://readdy.ai/api/search-image?query=tech%20startup%20office%20interior%20design%2C%20creative%20workspace%2C%20innovation%20zones%2C%20flexible%20collaboration%20areas%2C%20modern%20furniture%2C%20vibrant%20colors%2C%20dynamic%20atmosphere&width=600&height=400&seq=portfolio6&orientation=landscape",
         details: "Open concept, 50 employees",
     },
+    {
+        id: 7,
+        title: "Open Kitchen",
+        category: "kitchens",
+        description:
+            "Spacious open kitchen seamlessly blending with the living area, featuring modern cabinetry and natural light.",
+        image:
+            "/kitchens/27.png",
+        details: "Open concept, contemporary finish",
+    },
+    {
+        id: 8,
+        title: "L-Shape Kitchen",
+        category: "kitchens",
+        description:
+            "Efficient L-shaped kitchen design maximizing corner space with sleek countertops and ample storage.",
+        image:
+            "/kitchens/10.jpg",
+        details: "Compact yet functional",
+    },
+    {
+        id: 9,
+        title: "U-Shape Kitchen",
+        category: "kitchens",
+        description:
+            "Practical U-shaped kitchen providing maximum countertop space and storage with elegant finishes.",
+        image:
+            "/kitchens/3.jpg",
+        details: "Spacious design, family-friendly",
+    },
+    {
+        id: 10,
+        title: "Island Kitchen",
+        category: "kitchens",
+        description:
+            "Modern island kitchen with a central workspace ideal for cooking and entertaining, featuring premium materials.",
+        image:
+            "/kitchens/23.jpg",
+        details: "Island with seating & storage",
+    },
+    {
+        id: 11,
+        title: "Parallel/Galley Kitchen",
+        category: "kitchens",
+        description:
+            "Efficient parallel kitchen layout with two long countertops facing each other, maximizing workspace and storage in compact areas.",
+        image: "/kitchens/28.jpg",
+        details: "Ideal for apartments and compact spaces",
+    },
+
+    {
+        id: 12,
+        title: "Customized Kitchen",
+        category: "kitchens",
+        description:
+            "Tailor-made kitchen designed to client’s lifestyle and preferences, blending functionality with personalized aesthetics.",
+        image:
+            "/kitchens/13.jpg",
+        details: "Modular design, fully customizable",
+    },
 ];
 
-export { services, partners, slides, categories, projects }
+export { services, partners, slides, categories, projects, clients }

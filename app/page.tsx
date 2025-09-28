@@ -10,6 +10,8 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 // import BackgroundAnimation from "../components/BackgroundAnimation";
 import TrustedPartners from "@/components/TrustedPartner";
+import DesignProcess from "@/components/DesignProcess";
+import TrustedClients from "@/components/TrustedClients";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
@@ -46,8 +48,10 @@ export default function Home() {
       <main className="relative z-10">
         <Hero />
         <About />
+        <DesignProcess />
         <Services />
         <Portfolio />
+        <TrustedClients />
         <TrustedPartners />
         <Contact theme={theme} />
       </main>
