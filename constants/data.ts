@@ -233,4 +233,5 @@ const projects = [
     },
 ];
 
+
 export { services, partners, slides, categories, projects, clients }
