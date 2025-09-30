@@ -26,16 +26,35 @@ const cardVariants = {
 
 export default function TrustedClients() {
   const [index, setIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(3);
 
+  // Detect screen size and adjust cards
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 3) % clients.length);
-    }, 3000); // every 3s move next set
+    const updateCardsPerView = () => {
+      if (window.innerWidth < 640) {
+        setCardsPerView(1); // mobile
+      } else if (window.innerWidth < 1024) {
+        setCardsPerView(2); // tablet
+      } else {
+        setCardsPerView(3); // desktop
+      }
+    };
 
-    return () => clearInterval(interval);
+    updateCardsPerView();
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
   }, []);
 
-  const visibleClients = clients.slice(index, index + 3);
+  // Auto-rotate clients
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + cardsPerView) % clients.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [cardsPerView]);
+
+  const visibleClients = clients.slice(index, index + cardsPerView);
 
   return (
     <section className="py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-500">
@@ -51,12 +70,15 @@ export default function TrustedClients() {
           commitment to quality and innovation.
         </p>
 
-        <div className="mt-16 flex justify-center space-x-12">
+        <div
+          className={`mt-16 grid gap-8 justify-center 
+            grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`}
+        >
           <AnimatePresence mode="wait">
             {visibleClients.map((partner) => (
               <motion.div
                 key={partner.name + index}
-                className="flex-shrink-0 w-85 h-40 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-xl shadow-lg p-6"
+                className="flex-shrink-0 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-xl shadow-lg p-6 h-40"
                 variants={cardVariants}
                 initial="initial"
                 animate="animate"
@@ -65,7 +87,7 @@ export default function TrustedClients() {
                 <img
                   src={partner.logo}
                   alt={partner.name}
-                  className="h-24 w-[250px] object-contain"
+                  className="h-24 w-[200px] object-contain"
                 />
               </motion.div>
             ))}

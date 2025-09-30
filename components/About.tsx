@@ -47,14 +47,9 @@ export default function About() {
     }
   }, [isCountersInView]);
 
-  const fadeInLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
-
-  const fadeInRight = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0 },
+  const fadeIn = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
   };
 
   const fadeUp = {
@@ -65,17 +60,17 @@ export default function About() {
   return (
     <section
       id="about"
-      className="py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-500"
+      className="py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-500 overflow-hidden"
     >
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <motion.div
-            variants={fadeInLeft}
+            variants={fadeIn}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Creating Dreams Into
@@ -98,7 +93,7 @@ export default function About() {
             </p>
 
             <div className="flex items-center space-x-4 mb-8">
-              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center shrink-0">
                 <i className="ri-pencil-ruler-line text-white text-xl"></i>
               </div>
               <div>
@@ -112,7 +107,7 @@ export default function About() {
             </div>
 
             <div className="flex items-center space-x-4 mb-8">
-              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center shrink-0">
                 <i className="ri-scissors-line text-white text-xl"></i>
               </div>
               <div>
@@ -126,7 +121,7 @@ export default function About() {
             </div>
 
             <div className="flex items-center space-x-4 mb-8">
-              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center shrink-0">
                 <i className="ri-tools-line text-white text-xl"></i>
               </div>
               <div>
@@ -140,7 +135,7 @@ export default function About() {
             </div>
 
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center shrink-0">
                 <i className="ri-leaf-line text-white text-xl"></i>
               </div>
               <div>
@@ -156,11 +151,11 @@ export default function About() {
 
           {/* Right Image */}
           <motion.div
-            variants={fadeInRight}
+            variants={fadeIn}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 1, delay: 0.3 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
               <img
@@ -212,7 +207,7 @@ export default function About() {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg hover:scale-105 transform transition-transform"
             >
               <div className="w-16 h-16 bg-goldish-100 dark:bg-goldish-900 rounded-full flex items-center justify-center mx-auto mb-4">

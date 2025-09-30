@@ -51,6 +51,7 @@ export default function Home() {
         <DesignProcess />
         <Services />
         <Portfolio />
+        {/* Fix responsiveness */}
         <TrustedClients />
         <TrustedPartners />
         <Contact theme={theme} />
