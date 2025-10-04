@@ -113,72 +113,65 @@ const categories = [
 const projects = [
     {
         id: 1,
-        title: "Modern Penthouse",
+        title: "Living Room",
         category: "residential",
         description:
-            "Luxury penthouse with panoramic city views featuring contemporary design and premium materials.",
-        image:
-            "https://readdy.ai/api/search-image?query=luxury%20modern%20penthouse%20interior%20design%2C%20panoramic%20city%20views%2C%20contemporary%20furniture%2C%20premium%20materials%2C%20floor-to-ceiling%20windows%2C%20sophisticated%20lighting%2C%20elegant%20living%20space&width=600&height=400&seq=portfolio1&orientation=landscape",
+            "Elegant living room design featuring modern furniture, cozy ambiance, and tasteful décor for comfortable gatherings.",
+        image: "/portfolio/14.avif",
         details: "3 bedrooms, 4 bathrooms, 2800 sq ft",
     },
     {
         id: 2,
-        title: "Corporate Headquarters",
-        category: "commercial",
+        title: "Kid's Room",
+        category: "residential",
         description:
-            "Award-winning office design promoting collaboration and productivity with sustainable materials.",
-        image:
-            "https://readdy.ai/api/search-image?query=modern%20corporate%20office%20headquarters%20interior%2C%20collaborative%20workspace%20design%2C%20sustainable%20materials%2C%20contemporary%20furniture%2C%20professional%20lighting%2C%20productive%20environment&width=600&height=400&seq=portfolio2&orientation=landscape",
-        details: "15,000 sq ft, 200 employees",
+            "Playful and functional kid’s room with bright colors, creative storage, and safe furniture for a joyful environment.",
+        image: "/portfolio/16.avif",
+        details: "Open concept, 50 employees",
     },
     {
         id: 3,
-        title: "Boutique Hotel Lobby",
-        category: "hospitality",
-        description:
-            "Elegant hotel lobby design combining comfort with sophisticated aesthetics and local cultural elements.",
-        image:
-            "https://readdy.ai/api/search-image?query=boutique%20hotel%20lobby%20interior%20design%2C%20elegant%20reception%20area%2C%20sophisticated%20aesthetics%2C%20comfortable%20seating%2C%20cultural%20elements%2C%20ambient%20lighting%2C%20welcoming%20atmosphere&width=600&height=400&seq=portfolio3&orientation=landscape",
-        details: "5-star luxury hotel, 120 rooms",
-    },
-    {
-        id: 4,
-        title: "Victorian Home Renovation",
-        category: "renovation",
-        description:
-            "Complete restoration of historic Victorian home blending original character with modern amenities.",
-        image:
-            "https://readdy.ai/api/search-image?query=Victorian%20home%20renovation%20interior%2C%20historic%20character%20preservation%2C%20modern%20amenities%20integration%2C%20restored%20original%20features%2C%20contemporary%20updates%2C%20elegant%20finishes&width=600&height=400&seq=portfolio4&orientation=landscape",
-        details: "Built 1892, fully restored 2023",
-    },
-    {
-        id: 5,
         title: "Minimalist Apartment",
         category: "residential",
         description:
-            "Clean, functional design maximizing space efficiency while maintaining warmth and personality.",
-        image:
-            "https://readdy.ai/api/search-image?query=minimalist%20apartment%20interior%20design%2C%20clean%20lines%2C%20functional%20layout%2C%20space%20efficiency%2C%20warm%20materials%2C%20natural%20light%2C%20contemporary%20furniture%2C%20organized%20storage&width=600&height=400&seq=portfolio5&orientation=landscape",
+            "Minimalist apartment design with clean lines, neutral tones, and smart storage solutions for a clutter-free lifestyle.",
+        image: "https://readdy.ai/api/search-image?query=minimalist%20apartment%20interior%20design%2C%20clean%20lines%2C%20functional%20layout%2C%20space%20efficiency%2C%20warm%20materials%2C%20natural%20light%2C%20contemporary%20furniture%2C%20organized%20storage&width=600&height=400&seq=portfolio5&orientation=landscape",
         details: "1 bedroom, 800 sq ft",
     },
     {
-        id: 6,
-        title: "Tech Startup Office",
+        id: 4,
+        title: "Luxury Interior",
+        category: "hospitality",
+        description:
+            "Opulent interior design with rich materials, grand lighting, and refined details creating a luxurious atmosphere.",
+        image: "https://readdy.ai/api/search-image?query=boutique%20hotel%20lobby%20interior%20design%2C%20elegant%20reception%20area%2C%20sophisticated%20aesthetics%2C%20comfortable%20seating%2C%20cultural%20elements%2C%20ambient%20lighting%2C%20welcoming%20atmosphere&width=600&height=400&seq=portfolio3&orientation=landscape",
+        details: "5-star luxury hotel, 120 rooms",
+    },
+    {
+        id: 5,
+        title: "Commercial Spaces",
         category: "commercial",
         description:
-            "Dynamic workspace design fostering creativity and innovation with flexible collaboration areas.",
-        image:
-            "https://readdy.ai/api/search-image?query=tech%20startup%20office%20interior%20design%2C%20creative%20workspace%2C%20innovation%20zones%2C%20flexible%20collaboration%20areas%2C%20modern%20furniture%2C%20vibrant%20colors%2C%20dynamic%20atmosphere&width=600&height=400&seq=portfolio6&orientation=landscape",
-        details: "Open concept, 50 employees",
+            "Modern commercial space design with collaborative layouts, ergonomic furniture, and energy-efficient lighting.",
+        image: "/portfolio/12.jpg",
+        details: "15,000 sq ft, 200 employees",
+    },
+    {
+        id: 6,
+        title: "Home Renovation",
+        category: "renovation",
+        description:
+            "Comprehensive home renovation blending preserved character with modern upgrades, comfort, and aesthetics.",
+        image: "https://readdy.ai/api/search-image?query=Victorian%20home%20renovation%20interior%2C%20historic%20character%20preservation%2C%20modern%20amenities%20integration%2C%20restored%20original%20features%2C%20contemporary%20updates%2C%20elegant%20finishes&width=600&height=400&seq=portfolio4&orientation=landscape",
+        details: "Built 1892, fully restored 2023",
     },
     {
         id: 7,
         title: "Open Kitchen",
         category: "kitchens",
         description:
-            "Spacious open kitchen seamlessly blending with the living area, featuring modern cabinetry and natural light.",
-        image:
-            "/kitchens/27.png",
+            "Airy open kitchen seamlessly merging with living areas, featuring modern cabinetry and abundant natural light.",
+        image: "/kitchens/27.png",
         details: "Open concept, contemporary finish",
     },
     {
@@ -186,9 +179,8 @@ const projects = [
         title: "L-Shape Kitchen",
         category: "kitchens",
         description:
-            "Efficient L-shaped kitchen design maximizing corner space with sleek countertops and ample storage.",
-        image:
-            "/kitchens/10.jpg",
+            "Practical L-shaped kitchen design maximizing corners with stylish countertops and efficient storage.",
+        image: "/kitchens/10.jpg",
         details: "Compact yet functional",
     },
     {
@@ -196,9 +188,8 @@ const projects = [
         title: "U-Shape Kitchen",
         category: "kitchens",
         description:
-            "Practical U-shaped kitchen providing maximum countertop space and storage with elegant finishes.",
-        image:
-            "/kitchens/3.jpg",
+            "Spacious U-shaped kitchen layout offering maximum worktop area and storage with sleek modern finishes.",
+        image: "/kitchens/3.jpg",
         details: "Spacious design, family-friendly",
     },
     {
@@ -206,9 +197,8 @@ const projects = [
         title: "Island Kitchen",
         category: "kitchens",
         description:
-            "Modern island kitchen with a central workspace ideal for cooking and entertaining, featuring premium materials.",
-        image:
-            "/kitchens/23.jpg",
+            "Contemporary island kitchen with a central workspace perfect for cooking, dining, and socializing.",
+        image: "/kitchens/23.jpg",
         details: "Island with seating & storage",
     },
     {
@@ -216,22 +206,21 @@ const projects = [
         title: "Parallel/Galley Kitchen",
         category: "kitchens",
         description:
-            "Efficient parallel kitchen layout with two long countertops facing each other, maximizing workspace and storage in compact areas.",
+            "Streamlined parallel kitchen with dual counters for efficient workflow and smart storage in compact spaces.",
         image: "/kitchens/28.jpg",
         details: "Ideal for apartments and compact spaces",
     },
-
     {
         id: 12,
         title: "Customized Kitchen",
         category: "kitchens",
         description:
-            "Tailor-made kitchen designed to client’s lifestyle and preferences, blending functionality with personalized aesthetics.",
-        image:
-            "/kitchens/13.jpg",
+            "Bespoke kitchen tailored to client’s preferences, balancing functionality with personalized design aesthetics.",
+        image: "/kitchens/13.jpg",
         details: "Modular design, fully customizable",
     },
 ];
+
 
 
 export { services, partners, slides, categories, projects, clients }

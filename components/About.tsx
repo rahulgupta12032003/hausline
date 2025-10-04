@@ -19,7 +19,7 @@ export default function About() {
       const targets = {
         projects: 1650,
         cities_served: 35,
-        years: 18,
+        years: 21,
         quality_checks: 95,
       };
       const duration = 2000;
@@ -86,7 +86,7 @@ export default function About() {
               are.
             </p>
             <p className="text-sm md:text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              With over 18 years of experience in luxury interior design, we've
+              With over 21 years of experience in luxury interior design, we've
               helped hundreds of clients create their perfect spaces. From
               contemporary minimalism to timeless elegance, we craft
               environments that inspire and delight.
@@ -134,7 +134,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4">
+            {/* <div className="flex items-center space-x-4">
               <div className="w-12 h-12 bg-goldish-600 rounded-full flex items-center justify-center shrink-0">
                 <i className="ri-leaf-line text-white text-xl"></i>
               </div>
@@ -146,7 +146,7 @@ export default function About() {
                   Eco-friendly solutions for a healthier home
                 </p>
               </div>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Right Image */}
@@ -158,15 +158,32 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
-              <img
-                src="https://readdy.ai/api/search-image?query=professional%20interior%20designer%20team%20working%20on%20luxury%20project%2C%20modern%20office%20space%20with%20design%20materials%2C%20fabric%20samples%2C%20color%20swatches%2C%20architectural%20plans%2C%20creative%20workspace%20atmosphere&width=600&height=400&seq=about1&orientation=landscape"
-                alt="Design Process"
-                className="rounded-lg shadow-2xl object-cover w-full h-96"
-              />
+              {/* Collage container */}
+              <div className="grid grid-cols-2 gap-2 w-full h-96">
+                <img
+                  src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=600"
+                  alt="Interior Design 1"
+                  className="rounded-lg object-cover w-full h-full"
+                />
+                <div className="grid gap-2">
+                  <img
+                    src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGludGVyaW9yfGVufDB8fDB8fHww?w=300"
+                    alt="Interior Design 2"
+                    className="rounded-lg object-cover w-full h-48"
+                  />
+                  <img
+                    src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300"
+                    alt="Interior Design 3"
+                    className="rounded-lg object-cover w-full h-48"
+                  />
+                </div>
+              </div>
+
+              {/* Floating box */}
               <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-xl">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-goldish-600 dark:text-goldish-400">
-                    18+
+                    21+
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-300">
                     Years Experience

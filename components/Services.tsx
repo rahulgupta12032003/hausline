@@ -7,7 +7,7 @@ const services = [
     title: "Residential Design",
     description: "Transform your home into a personalized sanctuary",
     icon: "ri-home-4-line",
-    image: "https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800",
+    image: "/portfolio/2.png",
     features: [
       "Space Planning",
       "Custom Furniture",
@@ -19,7 +19,7 @@ const services = [
     title: "Commercial Spaces",
     description: "Professional environments that inspire productivity",
     icon: "ri-building-line",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800",
+    image: "/portfolio/13.jpg",
     features: [
       "Office Design",
       "Retail Spaces",
@@ -43,7 +43,7 @@ const services = [
     title: "3D Visualization",
     description: "See your dream space before it's built",
     icon: "ri-box-3-fill",
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800",
+    image: "/portfolio/5.png",
     features: [
       "Photorealistic Renders",
       "Virtual Walkthrough",

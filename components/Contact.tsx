@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import emailjs from "emailjs-com";
 
 export default function Contact({}: { theme?: string }) {
   const [formData, setFormData] = useState({
@@ -38,20 +39,16 @@ export default function Contact({}: { theme?: string }) {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://readdy.ai/api/form-submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        body: new URLSearchParams({
-          "form-id": "hausline-contact",
-          ...formData,
-        }),
-      });
+      const result = await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formData,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
 
-      if (response.ok) {
+      if (result.status === 200) {
         setSubmitStatus(
-          "Thank you for your inquiry! We will get back to you within 24 hours."
+          "✅ Thank you! Your message has been sent successfully."
         );
         setFormData({
           name: "",
@@ -61,14 +58,10 @@ export default function Contact({}: { theme?: string }) {
           budget: "",
           message: "",
         });
-      } else {
-        throw new Error("Submission failed");
       }
-    } catch (error: any) {
-      setSubmitStatus(
-        "Sorry, there was an error submitting your form. Please try again."
-      );
-      throw new Error(error);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      setSubmitStatus("❌ Failed to send. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
